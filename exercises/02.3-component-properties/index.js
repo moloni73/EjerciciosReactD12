@@ -14,7 +14,7 @@ const BootstrapCard = props => {
 					{props.buttonLabel}
 				</a>
 			</div>
-		</div>
+		</div>;
 };
 
 BootstrapCard.propTypes = {

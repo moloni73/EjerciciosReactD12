@@ -5,9 +5,12 @@ import PropTypes from "prop-types";
 // add the green inside this function
 const Alert = props => {
 	let alertClasses = "alert";
+
 	if (props.color == "red") alertClasses += " alert-danger";
-	else if (props.color == "orange") alertClasses += " alert-warning";
-	else alert("Invalid color, you can only specify: red or orange (for now)");
+	if (props.color == "orange") alertClasses += " alert-warning";
+	if (props.color == "green") alertClasses += "alert alert-success";
+
+	//else alert("Invalid color, you can only specify: red or orange (for now)");
 
 	return (
 		<div className={alertClasses} role="alert">
@@ -15,6 +18,7 @@ const Alert = props => {
 		</div>
 	);
 };
+
 Alert.propTypes = {
 	color: PropTypes.string,
 	text: PropTypes.string
